@@ -6,6 +6,7 @@ public class ListNode {
 
     public ListNode (int new_data){
         data = new_data;
+        next = null;
     }
 
     public void insertNext(ListNode node){
