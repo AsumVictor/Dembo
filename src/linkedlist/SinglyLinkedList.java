@@ -134,6 +134,27 @@ public class SinglyLinkedList {
 
          return curr.data;
      }
+
+     public void insertInSorted(int data){
+         ListNode curr = head;
+         ListNode prevNode = head;
+         ListNode newNode = new ListNode(data);
+
+         if(data < head.data){
+             newNode.insertNext(head);
+             head = newNode;
+             return;
+         }
+
+         while(curr != null){
+             if(curr.data > data) break;
+             prevNode = curr;
+             curr = curr.next;
+         }
+
+         newNode.insertNext(curr);
+         prevNode.insertNext(newNode);
+     }
 };
 
 
