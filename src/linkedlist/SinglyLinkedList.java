@@ -1,9 +1,15 @@
 package linkedlist;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class SinglyLinkedList {
      private ListNode head;
      private int size;
 
+     public ListNode getHead(){
+         return head;
+     }
 
      public void insert(int data){
          ListNode currentNode = head;
@@ -22,6 +28,10 @@ public class SinglyLinkedList {
          currentNode.insertNext(newNode);
          size++;
 
+     }
+
+     public void insertNode(ListNode node){
+         head = node;
      }
 
      public String toString(){
@@ -154,6 +164,33 @@ public class SinglyLinkedList {
 
          newNode.insertNext(curr);
          prevNode.insertNext(newNode);
+     }
+
+     public boolean hasCycle(){
+         ListNode fastPinter = head;
+         ListNode slowPoniter = head;
+
+         while(fastPinter != null){
+             if(fastPinter == slowPoniter) return true;
+
+             fastPinter = fastPinter.next.next;
+             slowPoniter = slowPoniter.next;
+
+         }
+
+         return false;
+     }
+
+     public int startOfCycle(){
+         Set<ListNode> trackedList = new HashSet<>();
+         ListNode currNode = head;
+
+         while (!trackedList.contains(currNode)){
+             trackedList.add(currNode);
+             currNode = currNode.next;
+         }
+
+         return currNode.data;
      }
 };
 
