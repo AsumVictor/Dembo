@@ -1,17 +1,15 @@
 package running;
 
-import linkedlist.ListNode;
-import linkedlist.SinglyLinkedList;
+import linkedlist.SingleLinkedList.ListNode;
+import linkedlist.SingleLinkedList.SinglyLinkedList;
 import solution.Solution;
-
-import java.util.List;
 
 public class SinglyLinkedListRun {
 
 
     public static void main(String[] args){
         Solution solution = new Solution();
-        SinglyLinkedList sll = new linkedlist.SinglyLinkedList();
+        SinglyLinkedList sll = new SinglyLinkedList();
         sll.insert(1);
         sll.insert(2);
         sll.insert(4);
@@ -33,7 +31,7 @@ public class SinglyLinkedListRun {
         n2.insertNext(n3);
         n1.insertNext(n2);
 
-        linkedlist.SinglyLinkedList sll2 = new linkedlist.SinglyLinkedList();
+        SinglyLinkedList sll2 = new SinglyLinkedList();
         sll2.insertNode(n1);
 
 //        System.out.println(sll2.hasCycle());

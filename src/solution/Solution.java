@@ -1,6 +1,6 @@
 package solution;
 
-import linkedlist.ListNode;
+import linkedlist.SingleLinkedList.ListNode;
 
 public class Solution {
 
