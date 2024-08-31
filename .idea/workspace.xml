@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29100f3c-ddbc-4048-bb6c-550822b399b4" name="Changes" comment="First Added">
-      <change afterPath="$PROJECT_DIR$/src/linkedlist/singlyCircularLinkedList/SingleCircularLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkedlist/singlyCircularLinkedList/SingleCircularLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/singlyCircularLinkedList/SingleCircularLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
