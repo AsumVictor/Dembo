@@ -1,5 +1,6 @@
 package solution;
 
+import linkedlist.DoubleLinkedList.DoubleListNode;
 import linkedlist.SingleLinkedList.ListNode;
 
 public class Solution {
@@ -62,5 +63,31 @@ public class Solution {
         }
 
         return dummy.next;
+    }
+
+    public boolean hasCycle(ListNode head){
+        ListNode fastPinter = head;
+        ListNode slowPoniter = head;
+
+        while(fastPinter != null){
+            fastPinter = fastPinter.next.next;
+            slowPoniter = slowPoniter.next;
+            if(fastPinter == slowPoniter) return true;
+        }
+
+        return false;
+    }
+
+    public boolean hasCycle(DoubleListNode head){
+        ListNode fastPinter = head;
+        ListNode slowPoniter = head;
+
+        while(fastPinter != null){
+            fastPinter = fastPinter.next.next;
+            slowPoniter = slowPoniter.next;
+            if(fastPinter == slowPoniter) return true;
+        }
+
+        return false;
     }
 }

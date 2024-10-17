@@ -16,17 +16,28 @@ public class SingleCircularLinkedList {
          if(isEmpty()){
              head = newNode;
              tail = head;
+             size++;
              return;
          }
          tail.next = newNode;
          newNode.next = head;
          tail = newNode;
+         size++;
      }
 
      public void printEl(){
          ListNode currNode = head;
+         String result = "[" + currNode.data + "]" + "-->";
+         currNode = currNode.next;
+         ListNode stopNode = head;
+//
+         while(currNode != stopNode){
+             result += "[" + currNode.data + "]" + "-->";
+             currNode = currNode.next;
+         }
 
-//         while() @params
+         System.out.println(result);
+
      }
 
 
